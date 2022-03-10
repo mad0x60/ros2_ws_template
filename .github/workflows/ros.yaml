@@ -15,7 +15,7 @@ jobs:
       -
         name: Test
         run: |
-          bash -c "
+          bash -c " \
           vcs import --skip-existing < src/ros2.repos src \
           && apt-get update \
           && rosdep update \
@@ -37,7 +37,7 @@ jobs:
       -
         name: Run linter
         run: |
-          bash -c "
+          bash -c " \
           vcs import --skip-existing < src/ros2.repos src \
           && ament_${{ matrix.linter }} src/
           "
